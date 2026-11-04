@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --bg: #060606; --fg: #EDE8E0; --ease: cubic-bezier(0.22, 0.61, 0.36, 1); }
+html { background: var(--bg); color-scheme: dark; scroll-behavior: smooth; }
+body { background: var(--bg); color: rgb(237 232 224 / 0.9); font-family: var(--font-sans), system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+::selection { background: #C9A05C; color: #060606; }
+@layer components {
+.label { font-size: 0.6875rem; letter-spacing: 0.28em; text-transform: uppercase; color: rgb(237 232 224 / 0.55); }
+.display { font-family: var(--font-serif), Georgia, serif; font-weight: 300; letter-spacing: -0.01em; line-height: 1.05; color: #EDE8E0; font-variation-settings: "opsz" 144, "SOFT" 0; }
+}
+:focus-visible { outline: 1px solid #C9A05C; outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; } }
